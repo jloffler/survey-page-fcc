@@ -9,6 +9,7 @@ Swatch colours
 === === === */
 
 /*
+Mobile First
 Table of Conents
  - Resets and overrides
  - Links and type
@@ -16,13 +17,13 @@ Table of Conents
  - Secondary layout structures
  - Form elements
  - Misc
+ - Responsive Design
 */
 
 /* *** Resets and Overrides *** */
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
   background-color: white;
   font-family: arial, sans-serif;
 }
@@ -30,5 +31,39 @@ body {
 /* *** Links and Type *** */
 
 /* *** Main Layout *** */
+header {
+  text-align: center;
+}
+
+#survey-form {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#survey-form > * {
+  flex: 1 100%;
+}
 
 /* *** Secondary Layout Structures *** */
+#input-text-wrap, #radio-button-wrap, fieldset {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#input-text-wrap > *, #radio-button-wrap > *, fieldset > * {
+  flex: 1 100%;
+}
+
+#backstory {
+  display: block;
+  width: 90%;
+  height: 60vh;
+  resize: both;
+}
+
+/* *** Responsive Design *** */
+@media all and (min-width: 600px) {
+  #input-text-wrap > * {
+    flex: 1 0 45%;
+  }
+}

@@ -15,48 +15,50 @@
 <body>
 <header>
   <h1 id="title">Superhero Creator</h1>
-  <p id="description">Create your very own hero or villain</p>
+  <p id="description">Create your very own hero or villain!</p>
 </header>
 <form id="survey-form" action="form-data.html">
-  <label id="name-label" for="name">Enter your hero's secret identity:</label>
-  <input type="text" id="name" required placeholder="bat-name here">
-  
-  <!-- COMPLETE
-    "If I enter an email that is not formatted correctly, I will see an HTML5
-    validation error."
-  -->
-  <label id="email-label" for="email">Enter your hero's super-e-mail address:</label>
-  <input type="email" id="email" required placeholder="kentc@dailyplanet.com">
-  
-  <!-- COMPLETE
-    - "If I enter non-numbers in the number input, I will see an HTML5
-      validation error"
-    - "If I enter numbers outside the range of the number input, which are
-      defined by the "min" and "max" attributes, I will see an HTML5 validation
-      error."
-  -->
-  <label id="number-label" for="number">Enter your hero's power level:</label>
-  <input type="number" id="number" min="1" max="9000" required placeholder="1-9000 ;)">
-  
-  <!-- COMPLETE
-    "For the name, email, and number input fields inside the form I can see
-    corresponding labels that describe the purpose of each field with the
-    following ids: id="name-label", id="email-label", and id="number-label"."
-  -->
-  <!-- COMPLETE
-    "For the name, email, and number input fields, I can see placeholder text
-    that gives me a description or instructions for each field."
-  -->
+  <div id="input-text-wrap">
+    <label id="name-label" for="name">Enter your hero's secret identity:</label>
+    <input type="text" id="name" required placeholder="bat-name here">
+    
+    <!-- COMPLETE
+      "If I enter an email that is not formatted correctly, I will see an HTML5
+      validation error."
+    -->
+    <label id="email-label" for="email">Enter your hero's super-e-mail:</label>
+    <input type="email" id="email" required placeholder="kentc@dailyplanet.com">
+    
+    <!-- COMPLETE
+      - "If I enter non-numbers in the number input, I will see an HTML5
+        validation error"
+      - "If I enter numbers outside the range of the number input, which are
+        defined by the "min" and "max" attributes, I will see an HTML5 validation
+        error."
+    -->
+    <label id="number-label" for="number">Enter your hero's power level:</label>
+    <input type="number" id="number" min="1" max="9000" required placeholder="1-9000 ;)">
+    
+    <!-- COMPLETE
+      "For the name, email, and number input fields inside the form I can see
+      corresponding labels that describe the purpose of each field with the
+      following ids: id="name-label", id="email-label", and id="number-label"."
+    -->
+    <!-- COMPLETE
+      "For the name, email, and number input fields, I can see placeholder text
+      that gives me a description or instructions for each field."
+    -->
 
-  <label for="driopdown">Is your super-person a hero, or a villain?</label>
-  <select id="dropdown" name="good-or-bad">
-    <option value="hero">Hero</option>
-    <option value="villain">Villain</option>
-    <option value="joe">Average Joe</option>
-    <option value="marsha">Median Marsha</option>
-    <option value="blake">Usual Blake</option>
-  </select>
-
+    <label for="driopdown">Is your super-person a hero, or a villain?</label>
+    <select id="dropdown" name="good-or-bad">
+      <option value="hero">Hero</option>
+      <option value="villain">Villain</option>
+      <option value="joe">Average Joe</option>
+      <option value="marsha">Median Marsha</option>
+      <option value="blake">Usual Blake</option>
+    </select>
+  </div> <!-- #input-text-wrap -->
+  
   <div id="radio-button-wrap">
     <!-- COMPLETE
       "Inside the form element, I can select a field from one or more groups of
@@ -99,7 +101,7 @@
       <input type="radio" id="chaotic-evil" name="alignment" value="chaotic-evil">
       Chaotic Evil
     </label>
-  </div>
+  </div> <!-- #radio-button-wrap -->
 
   <!-- COMPLETE
     "Inside the form element, I can select several fields from a series of
@@ -265,7 +267,7 @@
     </label>
     <label for="no-super-friends">
       <input id="no-super-friends" type="checkbox" name="super-problems" value="no-super-friends">
-      Ignored by a Superhero Personal Hero
+      No Super Friends
     </label>
     <label for="puppets">
       <input id="puppets" type="checkbox" name="super-problems" value="puppets">
@@ -287,7 +289,7 @@
       <input id="red-shirt" type="checkbox" name="super-problems" value="red-shirt">
       Wears a Red Shirt
     </label>
-    <label for="fallible-item">
+    <label for="fallible-item">  
       <input id="fallible-item" type="checkbox" name="super-problems" value="fallible-item">
       Powers are Dependant on a Fallible Item (ring, armor, etc)
     </label>
@@ -305,8 +307,10 @@
     "Inside the form element, I am presented with a textarea at the end for
     additional comments."
   -->
-  <label for="backstory">Write your hero's backstory:</label>
-  <textarea id="backstory" name="backstory" rows="8" cols="50" placeholder="e.g., struck by lightning, bitten by alien flea, etc."></textarea>
+  <label for="backstory">Write your hero's backstory:
+    <textarea id="backstory" name="backstory" placeholder="e.g., struck by lightning, bitten by alien flea, etc."></textarea>
+    <!--Removed rows="8" cols="50"-->
+  </label>
   <button type="submit" id="submit">Create Superhero</button>
 </form>
 </body>
