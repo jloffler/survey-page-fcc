@@ -1,0 +1,34 @@
+/* === === ===
+jloffler
+2021
+Written for - freeCodeCamp Survey Form Page project
+
+Swatch colours
+*
+*
+=== === === */
+
+/*
+Table of Conents
+ - Resets and overrides
+ - Links and type
+ - Main layout
+ - Secondary layout structures
+ - Form elements
+ - Misc
+*/
+
+/* *** Resets and Overrides *** */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: white;
+  font-family: arial, sans-serif;
+}
+
+/* *** Links and Type *** */
+
+/* *** Main Layout *** */
+
+/* *** Secondary Layout Structures *** */
