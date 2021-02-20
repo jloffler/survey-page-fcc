@@ -22,10 +22,14 @@ Table of Conents
 
 /* *** Resets and Overrides *** */
 body {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   background-color: white;
   font-family: arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* *** Links and Type *** */
@@ -35,35 +39,62 @@ header {
   text-align: center;
 }
 
-#survey-form {
+.form-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.form-container > * {
+  flex: 1 100%;
+}
+
+.input-text-wrap, .radio-button-wrap, fieldset {
   display: flex;
   flex-flow: row wrap;
 }
 
-#survey-form > * {
+.input-text-wrap > *, .radio-button-wrap > *, fieldset > * {
   flex: 1 100%;
 }
 
-/* *** Secondary Layout Structures *** */
-#input-text-wrap, #radio-button-wrap, fieldset {
-  display: flex;
-  flex-flow: row wrap;
+.radio-button-wrap > label {
+  margin: 2px;
+  padding: 0 0 5px 0;
+  border: 2px solid black;
+  border-radius: 1em;'
 }
 
-#input-text-wrap > *, #radio-button-wrap > *, fieldset > * {
-  flex: 1 100%;
+.backstory-label {
+  max-width: 95%;
 }
 
 #backstory {
   display: block;
-  width: 90%;
+  width: 100%;
   height: 60vh;
   resize: both;
 }
 
+/* *** Secondary Layout Structures *** */
+
+
 /* *** Responsive Design *** */
 @media all and (min-width: 600px) {
-  #input-text-wrap > * {
+  fieldset {
+    max-width: 45%;
+    flex: 1 0 auto;
+  }
+
+  .radio-button-wrap {
+    max-width: 40em;
+  }
+
+  .radio-button-wrap > label {
+    max-width: 10em;
+  }
+
+  .input-text-wrap > * {
     flex: 1 0 45%;
   }
 }

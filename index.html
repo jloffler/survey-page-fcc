@@ -17,8 +17,8 @@
   <h1 id="title">Superhero Creator</h1>
   <p id="description">Create your very own hero or villain!</p>
 </header>
-<form id="survey-form" action="form-data.html">
-  <div id="input-text-wrap">
+<form id="survey-form" class="form-container" action="form-data.html">
+  <div class="input-text-wrap">
     <label id="name-label" for="name">Enter your hero's secret identity:</label>
     <input type="text" id="name" required placeholder="bat-name here">
     
@@ -57,9 +57,9 @@
       <option value="marsha">Median Marsha</option>
       <option value="blake">Usual Blake</option>
     </select>
-  </div> <!-- #input-text-wrap -->
+  </div> <!-- .input-text-wrap -->
   
-  <div id="radio-button-wrap">
+  <div class="radio-button-wrap">
     <!-- COMPLETE
       "Inside the form element, I can select a field from one or more groups of
       radio buttons. Each group should be grouped using the name attribute."
@@ -101,7 +101,7 @@
       <input type="radio" id="chaotic-evil" name="alignment" value="chaotic-evil">
       Chaotic Evil
     </label>
-  </div> <!-- #radio-button-wrap -->
+  </div> <!-- .radio-button-wrap -->
 
   <!-- COMPLETE
     "Inside the form element, I can select several fields from a series of
@@ -307,7 +307,7 @@
     "Inside the form element, I am presented with a textarea at the end for
     additional comments."
   -->
-  <label for="backstory">Write your hero's backstory:
+  <label for="backstory" class="backstory-label">Write your hero's backstory:
     <textarea id="backstory" name="backstory" placeholder="e.g., struck by lightning, bitten by alien flea, etc."></textarea>
     <!--Removed rows="8" cols="50"-->
   </label>
