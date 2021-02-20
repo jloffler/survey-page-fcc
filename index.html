@@ -13,31 +13,21 @@
 </head>
 
 <body>
-<h1 id="title">Superhero Creator</h1>
-<p id="description">Create your very own hero or villain</p>
+<header>
+  <h1 id="title">Superhero Creator</h1>
+  <p id="description">Create your very own hero or villain</p>
+</header>
 <form id="survey-form" action="form-data.html">
   
   <label id="name-label" for="name">Enter your hero's secret identity:</label>
-  <input 
-    type="text"
-    id="name"
-    required
-    placeholder="bat-name here"
-  />
+  <input type="text" id="name" required placeholder="bat-name here">
   
   <!-- COMPLETE
     "If I enter an email that is not formatted correctly, I will see an HTML5
     validation error."
   -->
-  <label id="email-label" for="email">
-    Enter your hero's super-e-mail address:
-  </label>
-  <input
-    type="email"
-    id="email"
-    required    
-    placeholder="kentc@dailyplanet.com"
-  />
+  <label id="email-label" for="email">Enter your hero's super-e-mail address:</label>
+  <input type="email" id="email" required placeholder="kentc@dailyplanet.com">
   
   <!-- COMPLETE
     - "If I enter non-numbers in the number input, I will see an HTML5
@@ -47,16 +37,8 @@
       error."
   -->
   <label id="number-label" for="number">Enter your hero's power level:</label>
-  <input
-    type="number"
-    id="number"
-    min="1"
-    max="9000"
-    required
-    placedholder="1-9000 ;)"
-  />
+  <input type="number" id="number" min="1" max="9000" required placedholder="1-9000 ;)">
   
-
   <!-- COMPLETE
     "For the name, email, and number input fields inside the form I can see
     corresponding labels that describe the purpose of each field with the
@@ -87,36 +69,36 @@
       Lawful Good
     </label>
     <label for="neutral-good">
-      <input type="radio" id="neutral-good" name="alignment" 
-             value="neutral-good">Neutral Good
+      <input type="radio" id="neutral-good" name="alignment" value="neutral-good">
+      Neutral Good
     </label>
     <label for="chaotic-good">
-      <input type="radio" id="chaotic-good" name="alignment"
-             value="chaotic-good">Chaotic Good
+      <input type="radio" id="chaotic-good" name="alignment" value="chaotic-good">
+      Chaotic Good
     </label>
     <label for="lawful-neutral">
-      <input type="radio" id="lawful-neutral" name="alignment"
-             value="lawful-neutral">Lawful Neutral
+      <input type="radio" id="lawful-neutral" name="alignment" value="lawful-neutral">
+      Lawful Neutral
     </label>
     <label for="true-neutral">
-      <input type="radio" id="true-neutral" name="alignment"
-             value="true-neutral" checked>True Neutral
+      <input checked type="radio" id="true-neutral" name="alignment" value="true-neutral">
+      True Neutral
     </label>
     <label for="chaotic-neutral">
-      <input type="radio" id="chaotic-neutral" name="alignment"
-             value="chaotic-neutral">Chaotic Neutral
+      <input type="radio" id="chaotic-neutral" name="alignment" value="chaotic-neutral">
+      Chaotic Neutral
     </label>
     <label for="lawful-evil">
-      <input type="radio" id="lawful-evil" name="alignment"
-             value="lawful-evil">Lawful Evil
+      <input type="radio" id="lawful-evil" name="alignment" value="lawful-evil">
+      Lawful Evil
     </label>
     <label for="neutral-evil">
-      <input type="radio" id="neutral-evil" name="alignment"
-      value="neutral-evil">Neutral Evil
+      <input type="radio" id="neutral-evil" name="alignment" value="neutral-evil">
+      Neutral Evil
     </label>
     <label for="chaotic-evil">
-      <input type="radio" id="chaotic-evil" name="alignment"
-      value="chaotic-evil">Chaotic Evil
+      <input type="radio" id="chaotic-evil" name="alignment" value="chaotic-evil">
+      Chaotic Evil
     </label>
   </div>
 
