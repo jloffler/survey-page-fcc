@@ -62,7 +62,14 @@ header {
   margin: 2px;
   padding: 0 0 5px 0;
   border: 2px solid black;
-  border-radius: 1em;'
+  border-radius: 1em;
+}
+
+fieldset > label {
+  margin: 2px;
+  padding: 0 5px 2px 5px;
+  border: 1px solid black;
+  border-radius: 0.3em;
 }
 
 .backstory-label {
@@ -78,7 +85,6 @@ header {
 
 /* *** Secondary Layout Structures *** */
 
-
 /* *** Responsive Design *** */
 @media all and (min-width: 600px) {
   fieldset {
@@ -87,14 +93,20 @@ header {
   }
 
   .radio-button-wrap {
-    max-width: 40em;
+    max-width: 90%;
+    justify-content: center;
   }
 
   .radio-button-wrap > label {
-    max-width: 10em;
+    max-width: 30%;
+
   }
 
   .input-text-wrap > * {
     flex: 1 0 45%;
   }
+}
+
+@media all and (min-width: 800px) {
+  
 }
