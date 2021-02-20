@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="freeCodeCamp Survey Form Project">
-<title>Survey From Project</title>
+<title>Survey Form Project</title>
 
 <!-- favicon -->
 
@@ -13,67 +13,127 @@
 </head>
 
 <body>
-<h1 id="title">Personal Data Brokers</h1>
-<p id="description">
-Give us your information, so we can sell it, and we'll let you post pictures online for your friends. (Not really, this website's forms do nothing)
-</p>
-<form id="survey-form">
-  <field id="name"></field>
+<h1 id="title">Superhero Creator</h1>
+<p id="description">Create your very own hero or villain</p>
+<form id="survey-form" action="form-data.html">
   
-  <!-- TODO
+  <label id="name-label" for="name">Enter your hero's secret identity:</label>
+  <input 
+    type="text"
+    id="name"
+    required
+    placeholder="bat-name here"
+  />
+  
+  <!-- COMPLETE
     "If I enter an email that is not formatted correctly, I will see an HTML5
     validation error."
   -->
-  <field id="email"></field>
+  <label id="email-label" for="email">
+    Enter your hero's super-e-mail address:
+  </label>
+  <input
+    type="email"
+    id="email"
+    required    
+    placeholder="kentc@dailyplanet.com"
+  />
   
-  <!-- TODO
+  <!-- COMPLETE
     - "If I enter non-numbers in the number input, I will see an HTML5
       validation error"
     - "If I enter numbers outside the range of the number input, which are
       defined by the "min" and "max" attributes, I will see an HTML5 validation
       error."
   -->
-  <field id="number"></field>
+  <label id="number-label" for="number">Enter your hero's power level:</label>
+  <input
+    type="number"
+    id="number"
+    min="1"
+    max="9000"
+    required
+    placedholder="1-9000 ;)"
+  />
+  
 
-  <!-- TODO
+  <!-- COMPLETE
     "For the name, email, and number input fields inside the form I can see
     corresponding labels that describe the purpose of each field with the
     following ids: id="name-label", id="email-label", and id="number-label"."
   -->
-  <label id="name-label"></label>
-  <label id="email-label"></label>
-  <label id="number-label"></label>
-
-  <!-- TODO
+  <!-- COMPLETE
     "For the name, email, and number input fields, I can see placeholder text
     that gives me a description or instructions for each field."
   -->
 
-  <dropdown id="dropdown"></dropdown>
+  <label for="driopdown">Is your super-person a hero, or a villain?</label>
+  <select id="dropdown" name="good-or-bad">
+    <option value="hero">Hero</option>
+    <option value="villain">Villain</option>
+    <option value="joe">Average Joe</option>
+    <option value="marsha">Median Marsha</option>
+    <option value="blake">Usual Blake</option>
+  </select>
 
-  <!-- TODO
-    "Inside the form element, I can select a field from one or more groups of
-    radio buttons. Each group should be grouped using the name attribute."
-  -->
-  <radio></radio>
+  <div id="radio-button-wrap">
+    <!-- COMPLETE
+      "Inside the form element, I can select a field from one or more groups of
+      radio buttons. Each group should be grouped using the name attribute."
+    -->
+    <p>Select your hero's alignment:</p>
+    <label for="lawful-good">
+      <input type="radio" id="lawful-good" name="alignment">Lawful Good
+    </label>
+    <label for="neutral-good">
+      <input type="radio" id="neutral-good" name="alignment">Neutral Good
+    </label>
+    <label for="chaotic-good">
+      <input type="radio" id="chaotic-good" name="alignment">Chaotic Good
+    </label>
+        <label for="lawful-neutral">
+      <input type="radio" id="lawful-neutral" name="alignment">Lawful Neutral
+    </label>
+        <label for="true-neutral">
+      <input type="radio" id="true-neutral" name="alignment" checked>True Neutral
+    </label>
+        <label for="chaotic-neutral">
+      <input type="radio" id="chaotic-neutral" name="alignment">Chaotic Neutral
+    </label>
+        <label for="lawful-evil">
+      <input type="radio" id="lawful-evil" name="alignment">Lawful Evil
+    </label>
+        <label for="neutral-evil">
+      <input type="radio" id="neutral-evil" name="alignment">Neutral Evil
+    </label>
+        <label for="chaotic-evil">
+      <input type="radio" id="chaotic-evil" name="alignment">Chaotic Evil
+    </label>
+  </div>
 
   <!-- TODO
     "Inside the form element, I can select several fields from a series of
     checkboxes, each of which must have a value attribute."
   -->
-  <checkboxes></checkboxes>
+  <fieldset>
+    <legend>Super Powers</legend> 
+    <checkboxes></checkboxes>
+  </fieldset>
+  <fieldset>
+    <legend>Super Problems</legend>
+    <checkboxes/>
+  </fieldset>
 
   <!-- TODO
     "Inside the form element, I am presented with a textarea at the end for
     additional comments."
   -->
-  <textarea></textarea>
+  <label for="backstory">Write your hero's backstory:</label>
+  <textarea id="backstory" name="backstory" rows="8" cols="50" 
+    placeholder="e.g., struck by lightning, bitten by alien flea, etc.">
+  </textarea>
 
-  <button id="submit"></button>
-
+  <button type="submit" id="submit">Create Superhero</button>
 </form>
-
-
 </body>
-
 </html>
