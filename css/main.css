@@ -10,7 +10,8 @@ Swatch colours */
   --super-light-blue: #447bbe;
   --super-light-red: #df1f2d;
   --super-light-yellow: #FFD84D;
-  --lighter-blue: ;
+  --medium-blue: #2764AC;
+  --darker-yellow: #FFD028;
 
 /* Colour Variables */  
   --main-background-color: var(--super-light-blue);
@@ -20,7 +21,7 @@ Swatch colours */
   --button-background-color: var(--super-blue);
   --button-text-color: var(--super-light-yellow);
 
-  --hover-background-color: var(--lighter-blue);
+  --hover-background-color: var(--medium-blue);
 
   --checked-border: var(--super-red);
   --checked-background: var(--super-blue);
@@ -53,6 +54,19 @@ body {
   box-sizing: border-box;
 }
 
+input, textarea, select {
+  background-color: lightgrey;
+  border-radius: 0.5em;
+}
+header {
+  background-color: #FFF409;
+  color: #FF0F09;
+  border: 5px solid #FF0F09;
+}
+p, label, legend {
+  font-size: 1.1em;
+}
+
 /* *** Checkboxes and Radio Buttons *** */
 /*
   Hide the browser's default checkbox and radio buttons. Doing it this way,
@@ -66,13 +80,12 @@ input[type="checkbox"], input[type="radio"] {
   width: 0;
   right: 99999px;
 }
-fieldset > label {
-  cursor: pointer;
-}
 
-.radio-button-wrap > label:hover, fieldset > label:hover {
+.radio-button-wrap > label:hover {
+  background-color: var(--hover-background-color);
+}
+.checkbox-wrap > label:hover {
   background-color: var(--super-blue);
-  color: var(--super-light-yellow);
 }
 
 /* ~ tilde is the sibling combinator */
@@ -89,8 +102,11 @@ fieldset > label {
   font-weight: 600;
   line-height: 1.5;
 }
-
-/* *** Links and Type *** */
+.checkbox-wrap input:checked ~ label {
+  background-color: var(--checked-background);
+  border-color: var(--checked-border);
+  color: var(--checked-text);
+}
 
 /* *** Main Layout *** */
 header {
@@ -143,12 +159,15 @@ header {
   border: 2px solid var(--button-border-color);
 }
 
-fieldset > label {
+.checkbox-wrap > label {
+  display: block;
+  cursor: pointer;
+  width: 100%;
   margin: 2px;
   padding: 0 5px 2px 5px;
   border-radius: 0.3em;
-  color: var(--button-text-color);
-  background-color: var(--button-background-color);
+  color: var(--darker-yellow);
+  background-color: var(--medium-blue);
   border: 2px solid var(--button-border-color);
 }
 
@@ -162,6 +181,16 @@ fieldset > label {
   width: 100%;
   height: 50vh;
   resize: both;
+}
+
+#submit {
+  background-color: var(--checked-background);
+  border: 4px solid var(--checked-border);
+  border-radius: 1em;
+  color: var(--checked-text);
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1.5;
 }
 
 /* *** Responsive Design *** */
@@ -189,7 +218,7 @@ fieldset > label {
 }
 
 @media all and (min-width: 1212px) {
-  fieldset > label {
+  .checkbox-wrap {
     max-width: 262px;
   }
   .form-container { max-width: 1230px; }
