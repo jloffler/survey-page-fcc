@@ -4,7 +4,7 @@
 
 ## Links to Live Website
  - https://jloffler.github.io/survey-page-fcc/
- - Feb 21, 2021
+ - February 21, 2021
  
 ## Objective
 Build a website using HTML and CSS that is functionally similar to https://codepen.io/freeCodeCamp/full/VPaoNP
