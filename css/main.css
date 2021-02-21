@@ -9,7 +9,7 @@ Swatch colours
 === === === */
 
 /*
-Mobile First
+Mobile First Design
 Table of Conents
  - Resets and overrides
  - Links and type
@@ -43,6 +43,7 @@ header {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin: 0 auto 0 auto;
 }
 
 .form-container > * {
@@ -59,10 +60,11 @@ header {
 }
 
 .radio-button-wrap > label {
-  margin: 2px;
-  padding: 0 0 5px 0;
+  margin: 4px;
+  padding: 0;
   border: 2px solid black;
   border-radius: 1em;
+  text-align: center;
 }
 
 fieldset > label {
@@ -79,34 +81,33 @@ fieldset > label {
 #backstory {
   display: block;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   resize: both;
 }
 
-/* *** Secondary Layout Structures *** */
-
 /* *** Responsive Design *** */
-@media all and (min-width: 600px) {
-  fieldset {
-    max-width: 45%;
-    flex: 1 0 auto;
-  }
-
+@media all and (min-width: 500px) {
+  .input-text-wrap { max-width: 750px; }  
   .radio-button-wrap {
-    max-width: 90%;
+    max-width: 700px;
     justify-content: center;
   }
-
-  .radio-button-wrap > label {
-    max-width: 30%;
-
-  }
-
+  .radio-button-wrap > label { max-width: 31%; }
   .input-text-wrap > * {
     flex: 1 0 45%;
   }
+  fieldset {
+    max-width: 47%;
+    flex: 1 0 auto;
+  }
+  .backstory-label { max-width: 750px; }
+  #backstory { height: 25vh; }
+
 }
 
-@media all and (min-width: 800px) {
-  
+@media all and (min-width: 1212px) {
+  fieldset > label {
+    max-width: 262px;
+  }
+  .form-container { max-width: 1230px; }
 }
