@@ -46,13 +46,10 @@ body {
 */
 input[type="checkbox"], input[type="radio"] {
   position: absolute;
-  /*opacity: 0;*/
+  opacity: 0;
   cursor: pointer;
-  /*height: 0;*/
-  /*width: 0;*/
-  z-index: -1;
-  color: yellow;
-  background-color: green;
+  height: 0;
+  width: 0;
 }
 .radio-button-wrap > label, fieldset > label {
   cursor: pointer;
