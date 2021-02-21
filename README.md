@@ -1,14 +1,6 @@
 ## freeCodeCamp Responsive Web Design Projects
 #Build a Survey Form
 
-# Current task
- - CSS for large viewports
-
-# ToDo
- - Responsive for desktop monitors and laptops
- - Margins, spacing, padding
- - Colours
-
 ## Live site on GitHub Pages
  - incomplete:
    - URL
@@ -21,6 +13,7 @@ https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-p
 Build a website using HTML and CSS that is functionally similar to https://codepen.io/freeCodeCamp/full/VPaoNP
 
 ## Things I learned
+ - Hiding checkboxes and radio buttons (or custom styling them) in an accessible way
  - HTML form elements:
    - input
      - text, email, number, radio, checkbox
@@ -41,5 +34,7 @@ Build a website using HTML and CSS that is functionally similar to https://codep
  - Use semantic and accesible HTML
  - Make it responsive
  - Use grid and/or flexbox
- 
-### Unfinished
+
+### ToDo
+ - Colours
+ - Add github page, and codepen.io page
