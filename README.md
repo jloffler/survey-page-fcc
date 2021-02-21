@@ -3,9 +3,8 @@
 # Build a Survey Form
 
 ## Links to Live Website
- - incomplete:
-   - URL
- - project completion date
+ - https://jloffler.github.io/survey-page-fcc/
+ - Feb 21, 2021
  
 ## Objective
 Build a website using HTML and CSS that is functionally similar to https://codepen.io/freeCodeCamp/full/VPaoNP
@@ -39,6 +38,3 @@ https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-p
  - Use semantic and accesible HTML
  - Make it responsive
  - Use grid and/or flexbox
-
-### ToDo
- - Add github page, and codepen.io page
