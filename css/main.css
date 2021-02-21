@@ -9,9 +9,22 @@ Swatch colours */
   --super-red: #b11313;
   --super-light-blue: #447bbe;
   --super-light-red: #df1f2d;
+  --super-light-yellow: #FFD84D;
+  --lighter-blue: ;
+
+/* Colour Variables */  
   --main-background-color: var(--super-light-blue);
   --main-text-color: black;
-  --button-border-color: var(--super-blue);
+
+  --button-border-color: black;
+  --button-background-color: var(--super-blue);
+  --button-text-color: var(--super-light-yellow);
+
+  --hover-background-color: var(--lighter-blue);
+
+  --checked-border: var(--super-red);
+  --checked-background: var(--super-blue);
+  --checked-text: var(--super-light-yellow);
 }
 /* === === === */
 
@@ -40,6 +53,7 @@ body {
   box-sizing: border-box;
 }
 
+/* *** Checkboxes and Radio Buttons *** */
 /*
   Hide the browser's default checkbox and radio buttons. Doing it this way,
   instead of: <visibile: hidden;> means it is still available for screen readers.
@@ -50,17 +64,30 @@ input[type="checkbox"], input[type="radio"] {
   cursor: pointer;
   height: 0;
   width: 0;
+  right: 99999px;
 }
-.radio-button-wrap > label, fieldset > label {
+fieldset > label {
   cursor: pointer;
 }
 
 .radio-button-wrap > label:hover, fieldset > label:hover {
-  background-color: grey;
+  background-color: var(--super-blue);
+  color: var(--super-light-yellow);
 }
 
-.radio-buttonwrap > label:checked ~ .radio-buttonwrap > label {
-  background-color: yellow;
+/* ~ tilde is the sibling combinator */
+/* 
+  I had to rework the HTML to make the input-radio-buttons siblings (that also
+  come before) to the label in order for the label to change color on :checked.
+  Originally the input-radio-buttons were children of the label. But, w/o
+  Javascript children cannot alter parent elements.
+*/
+.radio-button-wrap input:checked ~ label {
+  background-color: var(--checked-background);
+  border: 4px solid var(--checked-border);
+  color: var(--checked-text);
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 /* *** Links and Type *** */
@@ -85,33 +112,44 @@ header {
   margin: 10px 0 10px 0;
 }
 
-.radio-button-wrap {
+.radio-button-container {
   margin-bottom: 25px;
 }
 
-.input-text-wrap, .radio-button-wrap, fieldset {
+.input-text-wrap, .radio-button-container, fieldset {
   display: flex;
   flex-flow: row wrap;
   border-radius: 0.5em;
 }
 
-.input-text-wrap > *, .radio-button-wrap > *, fieldset > * {
+.input-text-wrap > *, .radio-button-container > *, fieldset > * {
   flex: 1 100%;
 }
 
-.radio-button-wrap > label {
+.radio-button-wrap {
   margin: 4px;
   padding: 0;
-  border: 2px solid var(--button-border-color);
-  border-radius: 1em;
   text-align: center;
+  max-width: 100%;
+}
+
+.radio-button-wrap > label {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1em;
+  color: var(--button-text-color);
+  background-color: var(--button-background-color);
+  border: 2px solid var(--button-border-color);
 }
 
 fieldset > label {
   margin: 2px;
   padding: 0 5px 2px 5px;
-  border: 2px solid var(--button-border-color);
   border-radius: 0.3em;
+  color: var(--button-text-color);
+  background-color: var(--button-background-color);
+  border: 2px solid var(--button-border-color);
 }
 
 .backstory-label {
@@ -129,14 +167,15 @@ fieldset > label {
 /* *** Responsive Design *** */
 @media all and (min-width: 500px) {
   .input-text-wrap { max-width: 750px; }  
-  .radio-button-wrap {
+  .radio-button-container {
     max-width: 700px;
     justify-content: center;
   }
-  .radio-button-wrap > label { max-width: 31%; }
-  .input-text-wrap > * {
-    flex: 1 0 45%;
+  .radio-button-wrap { 
+    max-width: 31%;
+    margin-bottom: 1em;
   }
+  .input-text-wrap > * { flex: 1 0 45%; }
   fieldset {
     max-width: 47%;
     flex: 1 0 auto;
