@@ -18,6 +18,7 @@
   <p id="description">Create your very own hero or villain!</p>
 </header>
 <form id="survey-form" class="form-container" action="form-data.html">
+  
   <div class="input-text-wrap">
     <label id="name-label" for="name">Enter your hero's secret identity:</label>
     <input type="text" id="name" required placeholder="bat-name here">
@@ -65,42 +66,42 @@
       radio buttons. Each group should be grouped using the name attribute."
     -->
     <p>Select your hero's alignment:</p>
-    <label for="lawful-good">
+    <div class="radio-container">
       <input type="radio" id="lawful-good" name="alignment" value="lawful-good">
-      Lawful Good
-    </label>
-    <label for="neutral-good">
+      <label for="lawful-good">Lawful Good</label>
+    </div> <!-- .radio-container -->
+    <div class="radio-container">
       <input type="radio" id="neutral-good" name="alignment" value="neutral-good">
-      Neutral Good
-    </label>
-    <label for="chaotic-good">
+      <label for="neutral-good">Neutral Good</label>
+    </div> <!-- .radio-container -->
+    <div class="radio-container">
       <input type="radio" id="chaotic-good" name="alignment" value="chaotic-good">
-      Chaotic Good
-    </label>
-    <label for="lawful-neutral">
+      <label for="chaotic-good">Chaotic Good</label>
+    </div> <!-- .radio-container -->
+    <div class="radio-container">
       <input type="radio" id="lawful-neutral" name="alignment" value="lawful-neutral">
-      Lawful Neutral
-    </label>
-    <label for="true-neutral">
+      <label for="lawful-neutral">Lawful Neutral</label>
+    </div> <!-- .radio-container -->
+    <div class="radio-container">
       <input checked type="radio" id="true-neutral" name="alignment" value="true-neutral">
-      True Neutral
-    </label>
-    <label for="chaotic-neutral">
+      <label for="true-neutral">True Neutral</label>
+    </div> <!-- .radio-container -->
+    <div class="radio-container">
       <input type="radio" id="chaotic-neutral" name="alignment" value="chaotic-neutral">
-      Chaotic Neutral
-    </label>
-    <label for="lawful-evil">
+      <label for="chaotic-neutral">Chaotic Neutral</label>
+    </div> <!-- .radio-container -->
+    <div class="radio-container">
       <input type="radio" id="lawful-evil" name="alignment" value="lawful-evil">
-      Lawful Evil
-    </label>
-    <label for="neutral-evil">
+      <label for="lawful-evil">Lawful Evil</label>
+    </div> <!-- .radio-container -->
+    <div class="radio-container">
       <input type="radio" id="neutral-evil" name="alignment" value="neutral-evil">
-      Neutral Evil
-    </label>
-    <label for="chaotic-evil">
+      <label for="neutral-evil">Neutral Evil</label>
+    </div> <!-- .radio-container -->
+    <div class="radio-container">
       <input type="radio" id="chaotic-evil" name="alignment" value="chaotic-evil">
-      Chaotic Evil
-    </label>
+      <label for="chaotic-evil">Chaotic Evil</label>
+    </div> <!-- .radio-container -->
   </div> <!-- .radio-button-wrap -->
 
   <!-- COMPLETE
@@ -201,7 +202,7 @@
       <input id="natural-phenominom" type="checkbox" name="superpowers" value="natural-phenominom">
       Dominion Over Natural Phenominom (lightnight, water, etc)
     </label>
-  </fieldset>
+  </fieldset> <!-- .superpowers -->
   
   <fieldset class="problems">
     <legend>Super Problems</legend>
@@ -301,7 +302,7 @@
       <input id="low-iq" type="checkbox" name="super-problems" value="low-iq">
       Almost No IQ at All
     </label>
-  </fieldset>
+  </fieldset> <!-- .problems -->
 
   <!-- COMPLETE
     "Inside the form element, I am presented with a textarea at the end for
@@ -310,7 +311,8 @@
   <label for="backstory" class="backstory-label">Write your hero's backstory:
     <textarea id="backstory" name="backstory" placeholder="e.g., struck by lightning, bitten by alien flea, etc."></textarea>
     <!--Removed rows="8" cols="50"-->
-  </label>
+  </label> <!-- .backstory-label -->
+  
   <button type="submit" id="submit">Create Superhero</button>
 </form>
 </body>
