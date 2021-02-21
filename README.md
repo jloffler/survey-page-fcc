@@ -1,19 +1,20 @@
-## freeCodeCamp Responsive Web Design Projects
+### freeCodeCamp Responsive Web Design Project
 #Build a Survey Form
 
-## Live site on GitHub Pages
+## Links to Live Website
  - incomplete:
    - URL
  - project completion date
  
-## Instructions
-https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form
-
 ## Objective
 Build a website using HTML and CSS that is functionally similar to https://codepen.io/freeCodeCamp/full/VPaoNP
 
+### Instructions
+https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form
+
 ## Things I learned
  - Hiding checkboxes and radio buttons (or custom styling them) in an accessible way
+   - leaving it on the page so screen readers can still find them
  - HTML form elements:
    - input
      - text, email, number, radio, checkbox
@@ -25,8 +26,11 @@ Build a website using HTML and CSS that is functionally similar to https://codep
  - HTML form element attributes: checked, required, value, name, action, placeholder
  - label
    - nesting form elements inside label
-   - putting label before or after element
-   - using *for* attribute to link to form element's id
+     - is a pain in the butt if you later want to just use the label as a checkbox
+       - which could be troublesome from an accessibility standpoint
+         - it is bad practice to simply use colours to show different states
+   - putting label before or after input elements
+   - using *for* attribute to link to form/input element's id
  - More familier with CSS Flexbox
 
 ## Goals
@@ -36,5 +40,4 @@ Build a website using HTML and CSS that is functionally similar to https://codep
  - Use grid and/or flexbox
 
 ### ToDo
- - Colours
  - Add github page, and codepen.io page
