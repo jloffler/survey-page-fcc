@@ -2,10 +2,12 @@
 #Build a Survey Form
 
 # Current task
- - Create CSS
+ - CSS for large viewports
 
 # ToDo
- - 
+ - Responsive for desktop monitors and laptops
+ - Margins, spacing, padding
+ - Colours
 
 ## Live site on GitHub Pages
  - incomplete:
@@ -32,13 +34,12 @@ Build a website using HTML and CSS that is functionally similar to https://codep
    - nesting form elements inside label
    - putting label before or after element
    - using *for* attribute to link to form element's id
- - CSS Grid Layout
+ - More familier with CSS Flexbox
 
 ## Goals
  - Become familiar with HTML form elements/tags
  - Use semantic and accesible HTML
  - Make it responsive
- - Use an organized code structure
+ - Use grid and/or flexbox
  
 ### Unfinished
- 
