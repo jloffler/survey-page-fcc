@@ -13,6 +13,10 @@ Build a website using HTML and CSS that is functionally similar to https://codep
 https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form
 
 ## Things I learned
+ - Responsive Web Design
+   - Starting with a mobile first design will make things faster on mobile
+     - Finding break points can be done by increasing viewport size until
+         site breaks, either usefully or aesthetically
  - Hiding checkboxes and radio buttons (or custom styling them) in an accessible way
    - leaving it on the page so screen readers can still find them
  - HTML form elements:
