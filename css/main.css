@@ -3,10 +3,17 @@ jloffler
 2021
 Written for - freeCodeCamp Survey Form Page project
 
-Swatch colours
-*
-*
-=== === === */
+Swatch colours */
+:root {
+  --super-blue: #2b3784;
+  --super-red: #b11313;
+  --super-light-blue: #447bbe;
+  --super-light-red: #df1f2d;
+  --main-background-color: var(--super-light-blue);
+  --main-text-color: black;
+  --button-border-color: var(--super-blue);
+}
+/* === === === */
 
 /*
 Mobile First Design
@@ -24,12 +31,39 @@ Table of Conents
 body {
   margin: 10px;
   padding: 0;
-  background-color: white;
+  background-color: var(--main-background-color);
   font-family: arial, sans-serif;
+  color: var(--main-text-color);
 }
 
 * {
   box-sizing: border-box;
+}
+
+/*
+  Hide the browser's default checkbox and radio buttons. Doing it this way,
+  instead of: <visibile: hidden;> means it is still available for screen readers.
+*/
+input[type="checkbox"], input[type="radio"] {
+  position: absolute;
+  /*opacity: 0;*/
+  cursor: pointer;
+  /*height: 0;*/
+  /*width: 0;*/
+  z-index: -1;
+  color: yellow;
+  background-color: green;
+}
+.radio-button-wrap > label, fieldset > label {
+  cursor: pointer;
+}
+
+.radio-button-wrap > label:hover, fieldset > label:hover {
+  background-color: grey;
+}
+
+.radio-buttonwrap > label:checked ~ .radio-buttonwrap > label {
+  background-color: yellow;
 }
 
 /* *** Links and Type *** */
@@ -61,6 +95,7 @@ header {
 .input-text-wrap, .radio-button-wrap, fieldset {
   display: flex;
   flex-flow: row wrap;
+  border-radius: 0.5em;
 }
 
 .input-text-wrap > *, .radio-button-wrap > *, fieldset > * {
@@ -70,7 +105,7 @@ header {
 .radio-button-wrap > label {
   margin: 4px;
   padding: 0;
-  border: 2px solid black;
+  border: 2px solid var(--button-border-color);
   border-radius: 1em;
   text-align: center;
 }
@@ -78,7 +113,7 @@ header {
 fieldset > label {
   margin: 2px;
   padding: 0 5px 2px 5px;
-  border: 1px solid black;
+  border: 2px solid var(--button-border-color);
   border-radius: 0.3em;
 }
 
