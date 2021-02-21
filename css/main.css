@@ -66,6 +66,17 @@ header {
 p, label, legend {
   font-size: 1.1em;
 }
+footer {
+  background-color: var(--super-blue);
+  color: var(--super-light-yellow);
+  height: 3em;
+  text-align: center;
+}
+footer > p {
+  padding-top: 0.8em;
+}
+a:link { color: var(--super-light-yellow); }
+a:visited { color: var(--super-red); }
 
 /* *** Checkboxes and Radio Buttons *** */
 /*
@@ -191,6 +202,10 @@ header {
   font-weight: 600;
   font-size: 2em;
   line-height: 1.5;
+}
+
+#submit:hover {
+  box-shadow: 0 10px 10px rgba(32, 33, 36, 0.6);
 }
 
 /* *** Responsive Design *** */
