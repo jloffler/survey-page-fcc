@@ -50,6 +50,14 @@ header {
   flex: 1 100%;
 }
 
+.input-text-wrap > * {
+  margin: 10px 0 10px 0;
+}
+
+.radio-button-wrap {
+  margin-bottom: 25px;
+}
+
 .input-text-wrap, .radio-button-wrap, fieldset {
   display: flex;
   flex-flow: row wrap;
@@ -76,6 +84,7 @@ fieldset > label {
 
 .backstory-label {
   max-width: 95%;
+  margin: 25px 0 25px 0;
 }
 
 #backstory {
@@ -102,7 +111,10 @@ fieldset > label {
   }
   .backstory-label { max-width: 750px; }
   #backstory { height: 25vh; }
-
+  #submit {
+   max-width: 40%;
+   margin: 0 auto 25px auto;
+ }
 }
 
 @media all and (min-width: 1212px) {
