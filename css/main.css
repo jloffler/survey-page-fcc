@@ -229,6 +229,14 @@ header {
 }
 
 /* *** Responsive Design *** */
+@media (hover: none) {
+  .button-warning {
+    opacity: 1;
+    position: relative;
+    /*bottom: 50px;*/
+  }
+}
+
 @media all and (min-width: 500px) {
   .input-text-wrap { max-width: 750px; }  
   .radio-button-container {
